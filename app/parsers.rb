@@ -1,6 +1,6 @@
 module Parsers
   LIST = {
-    dollar_separated: Parsers::DollarSeparatedValues,
-    percent_separated: Parsers::PercentSeparatedValues
+    dollar_format: Parsers::DollarSeparatedValues,
+    percent_format: Parsers::PercentSeparatedValues
   }
 end
