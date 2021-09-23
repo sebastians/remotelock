@@ -1,6 +1,2 @@
-require './app/people_controller.rb'
-require './app/people_parser.rb'
-require './app/people.rb'
-require './app/person.rb'
-require './app/birth_date.rb'
-require './app/city.rb'
+current_path = File.expand_path("../", __FILE__)
+Dir["#{current_path}/app/*.rb"].each { |file| require file }
