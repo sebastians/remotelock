@@ -11,7 +11,7 @@ class People
   end
 
   def build
-    Parsers::LIST[@format].parse(@raw_content).map do |parsed_row|
+    PeopleParser.parse(@raw_content, format: @format).map do |parsed_row|
       Person.new(**parsed_row.to_h)
     end
   end

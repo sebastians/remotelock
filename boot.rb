@@ -1,7 +1,5 @@
 require './app/people_controller.rb'
-require './app/parsers/dollar_separated_values.rb'
-require './app/parsers/percent_separated_values.rb'
-require './app/parsers.rb'
+require './app/people_parser.rb'
 require './app/people.rb'
 require './app/person.rb'
 require './app/birth_date.rb'
