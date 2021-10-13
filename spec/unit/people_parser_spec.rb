@@ -33,5 +33,20 @@ RSpec.describe PeopleParser do
         )
       end
     end
+
+    context "when the format is pipe_format" do
+      let(:string) { File.read("spec/fixtures/people_by_pipe.txt") }
+      let(:format) { :pipe_format }
+
+      it "correctly parses each row" do
+        expect(subject[0].to_h).to eq(
+          { first_name: "Joseph", birthdate: "10.24.1990", city: "New York City" }
+        )
+
+        expect(subject[1].to_h).to eq(
+          { first_name: "Jane", birthdate: "1.15.1995", city: "Denver" }
+        )
+      end
+    end
   end
 end
