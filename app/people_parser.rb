@@ -3,7 +3,8 @@ require 'csv'
 class PeopleParser
   SUPPORTED_FORMATS = {
     dollar_format: { separator: "$" },
-    percent_format: { separator: "%" }
+    percent_format: { separator: "%" },
+    pipe_format: { separator: "|" }
   }
 
   def self.parse(string, format:, **options)
